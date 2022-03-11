@@ -15,10 +15,11 @@
         body {
             padding: 0;
             margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif
+            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+            background-color: #d8d8d8;
         }
 
-        #header {
+        .header {
             min-width: 280px;
             max-width: 600px;
             margin-left: auto;
@@ -29,10 +30,19 @@
             height: 95px;
             display: flex;
             align-items: center;
-            justify-content: cente
+            justify-content: center;
         }
 
-        #content {
+        .header--partner--logo .header__img {
+            outline: none;
+            text-decoration: none;
+            max-width: 135px;
+            width: 135px;
+            height: 37px;
+            font-size: 16px;
+        }
+
+        .content {
             padding: 27px 0px;
             flex-direction: column;
             min-width: 280px;
@@ -43,11 +53,37 @@
             margin-right: auto;
             border-collapse: collapse;
             border-spacing: 0;
-            background-color: red;
+            background-color: #FFFFFF;
             display: flex;
         }
 
-        #contacts-disclaimer {
+        .content--infos .content__infos_table {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .content--infos .content__infos__name {
+            margin: 0px;
+            margin-left: 37px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #666666;
+        }
+
+        .content--infos .content__infos__line {
+            display: flex;
+            width: 276px;
+            border-bottom: 4px solid #3F3F46;
+            border-radius: 4px;
+            margin: 16px 0px;
+        }
+
+        .content--infos .content__infos__icon {
+            max-width: 112px;
+            max-height: 112px;
+        }
+
+        .contacts-disclaimer {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -65,35 +101,35 @@
 </head>
 
 <body>
-    <div id="header">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+    <div class="header header--partner--logo">
+        <table>
             <tbody>
                 <tr>
-                    <td style="display: flex;
-                        align-items: center;
-                        justify-content: center;border-collapse:collapse;color:#23496d;word-break:break-word;background-color:#27272A;text-align:center;padding:0px;font-size:0px"
-                        valign="top" align="center">
-                        <img style="outline:none;text-decoration:none;max-width:135px;width:135px;height:37px;font-size:16px"
-                            alt="Logo do Parceiro" src="" width="600">
+                    <td>
+                        <img class="header__img" src={{ partner_logo_url }} alt="Logo do Parceiro" srcset={{
+                            partner_logo_url }}>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div id="content">
-        <div bgcolor="#FFFFFF">
-            <table style="border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
-                cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;">
-                            <p style="margin:0px;margin-left:37px;font-size:14px;color:#666666;font-weight:700;">
-                                Olá {{ name }}!
-                            </p>
-                            <span
-                                style="display: inline-flex;width: 276px;border-radius:4px;height: 4px;background-color: #3F3F46;margin: 16px 0px;"></span>
-                            <span>
-                                <p style="
+    <div class="content content--infos">
+        <table class="content__infos_table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="content__infos__name">
+                            Olá {{ name }}!
+                        </p>
+                        <span class="content__infos__line"></span>
+
+                        <span
+                            style="width:100%;display:inline-flex;align-items:center;justify-content:center;margin: 27px 0px;">
+                            <img class="content__infos__icon" src={{ content_icon }} srcset{{ content_icon }}
+                                alt="Icone de transferência" />
+                        </span>
+                        <span>
+                            <p style="
                                 font-family:'Verdana';
                                 font-style: normal;
                                 font-size: 14px;
@@ -101,21 +137,17 @@
                                 font-weight: 700;
                                 line-height: 20px;                                
                                 color: #3F3F46;">Realizamos uma transferência na sua conta
-                                </p>
-                            </span>
-                            <span
-                                style="width:100%;display:inline-flex;align-items:center;justify-content:center;margin: 27px 0px;">
-                                <img style="max-width:112px;max-height:112px;" src="" alt="Icone de transferência" />
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table style="border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
-                cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td style="max-width: 600px;
+                            </p>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td style="max-width: 600px;
                 border-collapse:collapse;
                 text-align:center;
                 font-size: 12px;
@@ -129,19 +161,18 @@
                 margin-bottom: 21px;
                 margin-top: 21px;
                 ">
-                            <span
-                                style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:#FFFFFF;border-radius: 50%;">
-                                <i class="fa-brands triangle"></i>
-                            </span>
-                            Caso você não reconheça essa solicitação, entre em contato conosco
-                            em um de nossos Canais de Atendimento o quanto antes.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                        <span
+                            style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:#FFFFFF;border-radius: 50%;">
+                            <i class="fa-brands triangle"></i>
+                        </span>
+                        Caso você não reconheça essa solicitação, entre em contato conosco
+                        em um de nossos Canais de Atendimento o quanto antes.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div id="contacts-disclaimer">
+    <div class="contacts-disclaimer">
         <div id="contacts__disclaimer--" style="">
             <table style=" border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
                 cellspacing="0" cellpadding="0">
