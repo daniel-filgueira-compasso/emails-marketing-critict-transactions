@@ -19,6 +19,10 @@
             background-color: #d8d8d8;
         }
 
+        table thead th td {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
         .header {
             min-width: 280px;
             max-width: 600px;
@@ -43,12 +47,11 @@
         }
 
         .content {
-            padding: 27px 0px;
+            padding: 20px 0px;
             flex-direction: column;
             min-width: 280px;
             max-width: 600px;
             width: 100%;
-            height: 95px;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
@@ -57,9 +60,63 @@
             display: flex;
         }
 
-        .content--infos .content__infos_table {
+        .content--infos .content__infos__table {
             border-spacing: 0 !important;
             border-collapse: collapse;
+        }
+
+        .content--infos .content__infos__banking {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 26px;
+        }
+
+        .content--infos .content__infos__banking .content__infos__banking__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 18px;
+            color: #3F3F46;
+        }
+
+        .content--infos .content__infos__banking .content__infos__banking__value {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 18px;
+            color: #71717A;
+        }
+
+        .content--infos .content__infos__alert {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .content--infos .content__infos__alert tbody tr td {
+            max-width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+            font-style: normal;
+            color: #3F3F46;
+            background-color: #FAED97;
+            border: transparent;
+            padding: 16px 90px;
+            margin-bottom: 21px;
+            margin-top: 21px;
+        }
+
+        .content--infos .content__infos__alert tbody tr td span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: #FFFFFF;
+            border-radius: 50%;
         }
 
         .content--infos .content__infos__name {
@@ -70,12 +127,56 @@
             color: #666666;
         }
 
-        .content--infos .content__infos__line {
+        .content--infos .content__infos__line__left__wrapper {
+            margin-top: 16px;
             display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .content--infos .content__infos__line__right__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .content--infos .content__infos__line__left {
+            display: inline-block;
             width: 276px;
-            border-bottom: 4px solid #3F3F46;
+            height: 4px;
+
+            /* Gray Dark/Gray 200 */
+            background-color: #3F3F46;
             border-radius: 4px;
-            margin: 16px 0px;
+            background-size: 0px;
+        }
+
+        .content--infos .content__infos__line__right {
+            display: inline-block;
+            width: 277px;
+            height: 4px;
+
+            /* Gray Dark/Gray 200 */
+            background-color: #3F3F46;
+            border-radius: 4px;
+            background-size: 0px;
+        }
+
+        .content--infos .content__infos_title_description {
+            font-style: normal;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 20px;
+            color: #3F3F46;
+        }
+
+        .content--infos .content__infos__icon__wrapper {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 27px 0px;
         }
 
         .content--infos .content__infos__icon {
@@ -83,19 +184,140 @@
             max-height: 112px;
         }
 
-        .contacts-disclaimer {
-            display: flex;
+        .contacts {
+            padding-top: 20px;
             flex-direction: column;
-            justify-content: space-around;
-            padding-top: 21px;
-            background-color: #EEEEEE;
-            max-width: 600px;
             min-width: 280px;
-            margin-top: 25px;
+            max-width: 600px;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
             border-spacing: 0;
+            background-color: #EEEEEE;
+            display: flex;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .contacts--disclaimer .contacts__infos__attendance {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            padding: 0px 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__title {
+            text-align: center;
+            line-height: 17px;
+            font-size: 11px;
+            margin: 0;
+            margin-bottom: 25px;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__email {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__phone {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__phone2 {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__title {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__email {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__phone {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contact__info__attendance__title .contact__info__icon__wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: #2aa81a;
+            color: #FFFFFF;
+            border-radius: 50%;
+        }
+
+        .contacts--disclaimer .contacts__infos__ombudsman {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            padding: 0px 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            text-align: center
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer .contact__infos__ombudsman__description {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+            color: #666666;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__separator {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__separator .contact__infos__line__separator__element::after {
+            content: "";
+            /* This is necessary for the pseudo element to work. */
+            display: block;
+            /* This will put the pseudo element on its own line. */
+            margin: 0 auto;
+            /* This will center the border. */
+            width: 90%;
+            /* Change this to whatever width you want. */
+            padding-top: 20px;
+            /* This creates some space between the element and the border. */
+            border-bottom: 1px solid #BEBEBE;
+            /* This creates the border. Replace black with whatever color you want. */
         }
     </style>
 </head>
@@ -114,55 +336,63 @@
         </table>
     </div>
     <div class="content content--infos">
-        <table class="content__infos_table">
+        <table class="content__infos__table">
             <tbody>
                 <tr>
                     <td>
                         <p class="content__infos__name">
                             Olá {{ name }}!
                         </p>
-                        <span class="content__infos__line"></span>
-
-                        <span
-                            style="width:100%;display:inline-flex;align-items:center;justify-content:center;margin: 27px 0px;">
+                        <div class="content__infos__line__left__wrapper">
+                            <span class="content__infos__line__left"></span>
+                        </div>
+                        <span>
+                            <p class="content__infos_title_description">Realizamos uma transferência na sua conta</p>
+                        </span>
+                        <span class="content__infos__icon__wrapper">
                             <img class="content__infos__icon" src={{ content_icon }} srcset{{ content_icon }}
                                 alt="Icone de transferência" />
                         </span>
-                        <span>
-                            <p style="
-                                font-family:'Verdana';
-                                font-style: normal;
-                                font-size: 14px;
-                                text-align: center;                            
-                                font-weight: 700;
-                                line-height: 20px;                                
-                                color: #3F3F46;">Realizamos uma transferência na sua conta
-                            </p>
-                        </span>
+                        <div class="content__infos__line__right__wrapper">
+                            <span class="content__infos__line__right"></span>
+                        </div>
                     </td>
                 </tr>
             </tbody>
         </table>
-
-        <table>
+        <table class="content__infos__banking">
             <tbody>
                 <tr>
-                    <td style="max-width: 600px;
-                border-collapse:collapse;
-                text-align:center;
-                font-size: 12px;
-                line-height: 20px;
-                font-weight: 400;
-                font-style: normal;
-                color:#3F3F46;
-                background-color: #FAED97;
-                border:transparent;
-                padding: 16px 90px;
-                margin-bottom: 21px;
-                margin-top: 21px;
-                ">
-                        <span
-                            style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:#FFFFFF;border-radius: 50%;">
+                    <td class="content__infos__banking__title">Valor de transferência:</td>
+                    <td class="content__infos__banking__value">R$ 3.572,00</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">Conta de Origem:</td>
+                    <td class="content__infos__banking__value">006071-0</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">CPF do titular: </td>
+                    <td class="content__infos__banking__value">012.321.109-00</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">Banco: </td>
+                    <td class="content__infos__banking__value">237 BRADESCO S.A</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">Agência:</td>
+                    <td class="content__infos__banking__value">0008</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">Data:</td>
+                    <td class="content__infos__banking__value">04/01/2022</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="content__infos__alert">
+            <tbody>
+                <tr>
+                    <td>
+                        <span>
                             <i class="fa-brands triangle"></i>
                         </span>
                         Caso você não reconheça essa solicitação, entre em contato conosco
@@ -172,196 +402,148 @@
             </tbody>
         </table>
     </div>
-    <div class="contacts-disclaimer">
-        <div id="contacts__disclaimer--" style="">
-            <table style=" border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
-                cellspacing="0" cellpadding="0">
+    <div class="contacts contacts--disclaimer">
+        <div class="contacts__infos__wrapper">
+            <table class="contacts__infos__attendance">
                 <tbody>
                     <tr>
-                        <td
-                            style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 24px;display:inline-block; align-items: center; justify-content:center;">
-                            <div style="color:inherit;font-size:inherit;line-height:inherit; display:flex"
-                                id="m_-9099462870854037562hs_cos_wrapper_module_16294057632502">
-                                <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                    id="m_-9099462870854037562hs_cos_wrapper_module_16294057632502_">
-                                    <p style="text-align:center;line-height:150%;font-size:11px;margin:0; margin-bottom:25px;"
-                                        align="center">
-                                        <span>
-                                            <span
-                                                style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background-color:#2aa81a;color:#FFFFFF;border-radius: 50%;">
-                                                <i class="fa-brands fa-whatsapp"></i>
-                                            </span>
-                                            <strong style="color:#666666">
-                                                Atendimento
-                                            </strong>
-                                        </span>
-                                    </p>
-                                    <p style="text-align:center;line-height:150%;font-size:11px;margin:0" align="left">
-                                        <span style="color:#666666"><a
-                                                href="mailto:atendimento@terrainvestimentos.com.br"
-                                                target="_blank">atendimento@<wbr>terrainvestimentos.com.br</a></span>
-                                    </p>
-                                    <p style="text-align:center;line-height:150%;font-size:11px;margin:0" align="left">
-                                        <span style="color:#666666">(11)
-                                            3165-6065 (São Paulo e região metropolitana)</span>
-                                    </p>
-                                    <p style="text-align:center;line-height:150%;font-size:11px;margin:0" align="left">
-                                        <span style="color:#666666">0800 940
-                                            0006 (demais localidades)</span>
-                                    </p>
-                                </div>
-                            </div>
+                        <td>
+                            <p class="contact__info__attendance__title">
+                                <span class="contact__info__icon__wrapper">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </span>
+                                <strong style="color:#666666">
+                                    Atendimento
+                                </strong>
+                            </p>
+                            <p class="contact__info__attendance__email">
+                                <a href="mailto:atendimento@terrainvestimentos.com.br"
+                                    target="_blank">atendimento@<wbr>terrainvestimentos.com.br</a></span>
+                            </p>
+                            <p class="contact__info__attendance__phone">
+                                <span>
+                                    (11) 3165-6065 (São Paulo e região metropolitana)
+                                </span>
+                            </p>
+                            <p class="contact__info__attendance__phone2">
+                                0800 940 0006 (demais localidades)
+                            </p>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <table style="border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
-                cellspacing="0" cellpadding="0">
+            <table class="contacts__infos__ombudsman">
                 <tbody>
                     <tr>
-                        <td
-                            style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 0px;display:flex; align-items: center; justify-content:center;">
-                            <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                id="m_-9099462870854037562hs_cos_wrapper_module_16294057791383">
-                                <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                    id="m_-9099462870854037562hs_cos_wrapper_module_16294057791383_">
-                                    <p style="color:#666666;text-align:left;line-height:150%;font-size:11px;margin:0;margin-bottom:25px;text-align:center;"
-                                        align="center">
-                                        <span>
-                                            <strong>
-                                                <span>Ouvidoria</span></strong></span>
-                                    </p>
-                                    <p style="color:#666666;text-align:left;line-height:150%;font-size:11px;margin:0;text-align:center;"
-                                        align="center">
-
-                                        <a href="mailto:ouvidoria@terrainvestimentos.com.br"
-                                            target="_blank">ouvidoria@terrainvestimentos.<wbr>com.br</a>
-                                        &nbsp;
-                                    </p>
-                                    <p style="text-align:left;line-height:150%;font-size:11px;margin:0;text-align:center;"
-                                        align="center"><span style="color:#666666">0800 940
-                                            0406</span></p>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div style="min-width:280px;max-width:600px;width:100%;margin-left:auto;margin-right:auto;border-collapse:collapse;border-spacing:0; display: flex; align-items:center;justify-content:center"
-            bgcolor="#ffffff">
-            <div class="m_-9099462870854037562hse-column m_-9099462870854037562hse-size-12"
-                id="m_-9099462870854037562column_1602088296538_0">
-                <table style="border-spacing:0!important;border-collapse:collapse;text-align:center" role="presentation"
-                    width="100%" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td
-                                style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 24px">
-                                <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                    id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351">
-                                    <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                        id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351_">
-                                        <p style="font-size:11px;line-height:17px;margin:0">
-                                            <span style="color:#666666">As áreas
-                                                de
-                                                Atendimento e Ouvidoria funcionam em dias úteis das 9h às
-                                                18h.
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table
-                    style="min-width:20px;width:90%;max-width:100%;border-spacing:0;border-collapse:collapse;font-size:1px"
-                    role="presentation" width="100%" border="0" align="center">
-                    <tbody>
-                        <tr>
-                            <td style="border-collapse:collapse;font-size:15px;color:#BEBEBE;word-break:break-word;line-height:0;border:transparent;border-bottom:1px solid #BEBEBE;border-bottom-width:1px"
-                                width="100%" valign="middle">
+                        <td>
+                            <p class="contact__info__ombudsman__title"
+                                style="color:#666666;text-align:left;line-height:150%;font-size:11px;margin:0;margin-bottom:25px;text-align:center;">
+                                <span>
+                                    <strong>
+                                        <span>Ouvidoria</span></strong></span>
+                            </p>
+                            <p class="contact__info__ombudsman__email">
+                                <a href="mailto:ouvidoria@terrainvestimentos.com.br"
+                                    target="_blank">ouvidoria@terrainvestimentos.<wbr>com.br</a>
                                 &nbsp;
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table style="border-spacing:0!important;border-collapse:collapse" role="presentation" width="100%"
-                    cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="border-collapse:collapse;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px 20px;font-size:0px"
-                                valign="top" align="center">
-
-                                <img style="outline:none;text-decoration:none;max-width:100%;font-size:16px"
-                                    alt="16b73932-7f7a-4e8d-a5cd-9b3674b22b56"
-                                    src="https://ci5.googleusercontent.com/proxy/2_Th0pMQt47q_lToa_ke364W36nBYgmkuJTFvYiUBXhBot1gLniPbUzME5xEz9mPu8rQER0QBl65IAjwZGJ23_JDAz3fPRAM-Dz23MstY22h8m2zKTeYpBbpi7KOUunVD4bbe8Zj635cKfd2Oo4AC-P87288qkAgfwPQ8mNXf4ASHAPooHq_LHzIT0VryT-pKEW7k-u-SW1Pm8ZhMb4dIXmwRN1YYBPWbYAov9VXUaecJT8cdRE=s0-d-e1-ft#https://email.terrainvestimentos.com.br/hs-fs/hubfs/16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png?width=1120&amp;upscale=true&amp;name=16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png"
-                                    class="CToWUd" width="560" align="middle">
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            </p>
+                            <p class="contact__info__ombudsman__phone">
+                                0800 940 0406
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div style="min-width:280px;max-width:600px;width:100%;margin-left:auto;margin-right:auto;border-collapse:collapse;border-spacing:0; display: flex; align-items:center;justify-content:flex-start"
-            bgcolor="#ffffff">
-            <div>
-                <table style="border-spacing:0!important;border-collapse:collapse;text-align:center" role="presentation"
-                    width="100%" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td
-                                style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 24px">
-                                <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                    id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351">
-                                    <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                        id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351_">
-                                        <p
-                                            style="font-size:11px;line-height:17px;margin:0;text-align:left;color:#666666;margin-bottom:21px">
-                                            <strong>
-                                                DISCLAIMER
-                                            </strong>
-                                        </p>
-                                        <p
-                                            style="font-size:11px;line-height:17px;margin:0;text-align:left;color:#666666">
-                                            Esta
-                                            mensagem é exclusivamente para fins informativos e não deve ser
-                                            considerada como uma recomendação, sugestão de estratégia ou análise
-                                            de valores mobiliários. Esta mensagem também não se enquadra como
-                                            uma oferta ou solicitação para a compra ou venda de qualquer
-                                            instrumento financeiro ou garantia de confirmação de operação. Além
-                                            disso, esta comunicação não leva em consideração os objetivos de
-                                            investimento, situação financeira ou necessidades específicas de
-                                            qualquer investidor e não deve servir como única fonte de
-                                            informações no processo decisório do investidor, que deverá realizar
-                                            uma análise da oferta e seus respectivos riscos, diante de seus
-                                            objetivos e da sua tolerância a riscos. A Terra Investimentos não se
-                                            responsabiliza pelos resultados advindos das decisões de
-                                            investimentos tomadas pelos clientes, não podendo ser acionada por
-                                            retornos positivos e/ou negativos que impactem o patrimônio do
-                                            investidor. Ressaltamos que as informações contidas nesta mensagem
-                                            poderão sofrer alterações sem aviso prévio, o que poderá impactar os
-                                            preços dos ativos no momento de efetiva contratação. Investimentos
-                                            em ações e outros valores mobiliários apresentam riscos elevados e a
-                                            rentabilidade obtida no passado não representa garantia de
-                                            resultados futuros, e a rentabilidade divulgada não é liquida de
-                                            impostos. O investimento em Ações, Fundos Imobiliários e BDRs não
-                                            são garantidos pelo Fundo Garantidor de Crédito (FGC).
+        <table class="contacts__infos__disclaimer">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="contact__infos__ombudsman__description">
+                            As áreas de Atendimento e Ouvidoria funcionam em dias úteis das
+                            9h às
+                            18h.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="contacts__infos__line__separator">
+            <tbody>
+                <tr>
+                    <td class="contact__infos__line__separator__element"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="border-collapse:collapse;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px 20px;font-size:0px"
+                        valign="top" align="center">
 
-                                            Terra Investimentos, Rua Joaquim Floriano, 100, 5º andar, São Paulo,
-                                            SP 04534-000, Brasil
-                                        </p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                        <img style="outline:none;text-decoration:none;max-width:100%;font-size:16px"
+                            alt="16b73932-7f7a-4e8d-a5cd-9b3674b22b56"
+                            src="https://ci5.googleusercontent.com/proxy/2_Th0pMQt47q_lToa_ke364W36nBYgmkuJTFvYiUBXhBot1gLniPbUzME5xEz9mPu8rQER0QBl65IAjwZGJ23_JDAz3fPRAM-Dz23MstY22h8m2zKTeYpBbpi7KOUunVD4bbe8Zj635cKfd2Oo4AC-P87288qkAgfwPQ8mNXf4ASHAPooHq_LHzIT0VryT-pKEW7k-u-SW1Pm8ZhMb4dIXmwRN1YYBPWbYAov9VXUaecJT8cdRE=s0-d-e1-ft#https://email.terrainvestimentos.com.br/hs-fs/hubfs/16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png?width=1120&amp;upscale=true&amp;name=16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png"
+                            class="CToWUd" width="560" align="middle">
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td
+                        style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 24px">
+                        <div style="color:inherit;font-size:inherit;line-height:inherit"
+                            id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351">
+                            <div style="color:inherit;font-size:inherit;line-height:inherit"
+                                id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351_">
+                                <p
+                                    style="font-size:11px;line-height:17px;margin:0;text-align:left;color:#666666;margin-bottom:21px">
+                                    <strong>
+                                        DISCLAIMER
+                                    </strong>
+                                </p>
+                                <p style="font-size:11px;line-height:17px;margin:0;text-align:justify
+                                ;color:#666666">
+                                    Esta
+                                    mensagem é exclusivamente para fins informativos e não deve ser
+                                    considerada como uma recomendação, sugestão de estratégia ou análise
+                                    de valores mobiliários. Esta mensagem também não se enquadra como
+                                    uma oferta ou solicitação para a compra ou venda de qualquer
+                                    instrumento financeiro ou garantia de confirmação de operação. Além
+                                    disso, esta comunicação não leva em consideração os objetivos de
+                                    investimento, situação financeira ou necessidades específicas de
+                                    qualquer investidor e não deve servir como única fonte de
+                                    informações no processo decisório do investidor, que deverá realizar
+                                    uma análise da oferta e seus respectivos riscos, diante de seus
+                                    objetivos e da sua tolerância a riscos. A Terra Investimentos não se
+                                    responsabiliza pelos resultados advindos das decisões de
+                                    investimentos tomadas pelos clientes, não podendo ser acionada por
+                                    retornos positivos e/ou negativos que impactem o patrimônio do
+                                    investidor. Ressaltamos que as informações contidas nesta mensagem
+                                    poderão sofrer alterações sem aviso prévio, o que poderá impactar os
+                                    preços dos ativos no momento de efetiva contratação. Investimentos
+                                    em ações e outros valores mobiliários apresentam riscos elevados e a
+                                    rentabilidade obtida no passado não representa garantia de
+                                    resultados futuros, e a rentabilidade divulgada não é liquida de
+                                    impostos. O investimento em Ações, Fundos Imobiliários e BDRs não
+                                    são garantidos pelo Fundo Garantidor de Crédito (FGC).
+
+                                </p>
+                                <p style="font-size:11px;line-height:17px;margin:0;text-align:justify
+                                ;color:#666666">
+                                    <br />
+                                    Terra Investimentos, Rua Joaquim Floriano, 100, 5º andar, São Paulo,
+                                    SP 04534-000, Brasil
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
