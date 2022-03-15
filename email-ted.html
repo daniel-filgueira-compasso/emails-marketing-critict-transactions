@@ -170,6 +170,7 @@
             font-weight: 700;
             line-height: 20px;
             color: #3F3F46;
+            margin-top: 24px;
         }
 
         .content--infos .content__infos__icon__wrapper {
@@ -342,7 +343,7 @@
                 <tr>
                     <td>
                         <p class="content__infos__name">
-                            Olá {{ name }}!
+                            Olá {{ client_name }}!
                         </p>
                         <div class="content__infos__line__left__wrapper">
                             <span class="content__infos__line__left"></span>
@@ -364,28 +365,28 @@
         <table class="content__infos__banking">
             <tbody>
                 <tr>
-                    <td class="content__infos__banking__title">Valor de transferência:</td>
-                    <td class="content__infos__banking__value">R$ 3.572,00</td>
+                    <td class="content__infos__banking__title">{{ transfer_value_title }}</td>
+                    <td class="content__infos__banking__value">{{ transfer_value }}</td>
                 </tr>
                 <tr>
-                    <td class="content__infos__banking__title">Conta de Origem:</td>
-                    <td class="content__infos__banking__value">006071-0</td>
+                    <td class="content__infos__banking__title">{{ origin_account_title }}</td>
+                    <td class="content__infos__banking__value">{{ origin_account_value }}</td>
                 </tr>
                 <tr>
-                    <td class="content__infos__banking__title">CPF do titular: </td>
-                    <td class="content__infos__banking__value">012.321.109-00</td>
+                    <td class="content__infos__banking__title">{{ cpf_holder_title }}</td>
+                    <td class="content__infos__banking__value">{{ cpf_holder_value }}</td>
                 </tr>
                 <tr>
-                    <td class="content__infos__banking__title">Banco: </td>
-                    <td class="content__infos__banking__value">237 BRADESCO S.A</td>
+                    <td class="content__infos__banking__title">{{ bank_title }}</td>
+                    <td class="content__infos__banking__value">{{ bank_value }}</td>
                 </tr>
                 <tr>
-                    <td class="content__infos__banking__title">Agência:</td>
-                    <td class="content__infos__banking__value">0008</td>
+                    <td class="content__infos__banking__title">{{ agency_title }}</td>
+                    <td class="content__infos__banking__value">{{ agency_value }}</td>
                 </tr>
                 <tr>
-                    <td class="content__infos__banking__title">Data:</td>
-                    <td class="content__infos__banking__value">04/01/2022</td>
+                    <td class="content__infos__banking__title">{{ data_transfer_title }}:</td>
+                    <td class="content__infos__banking__value">{{ data_transfer_value }}</td>
                 </tr>
             </tbody>
         </table>
