@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Email Marketing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -95,6 +95,7 @@
         }
 
         .content--infos .content__infos__alert tbody tr td {
+            display: flex;
             max-width: 600px;
             border-collapse: collapse;
             text-align: center;
@@ -105,7 +106,7 @@
             color: #3F3F46;
             background-color: #FAED97;
             border: transparent;
-            padding: 16px 90px;
+            padding: 16px 46px;
             margin-bottom: 21px;
             margin-top: 21px;
         }
@@ -114,10 +115,18 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
-            color: #FFFFFF;
             border-radius: 50%;
+            margin-right: 18px;
+        }
+
+        .content--infos .content__infos__alert tbody tr td span i {
+            font-size: 28px;
+            color: #DBC10B;
+            background-color: #FAED97;
+        }
+
+        .content--infos .content__infos__alert tbody tr td p {
+            text-align: left;
         }
 
         .content--infos .content__infos__name {
@@ -321,6 +330,28 @@
             border-bottom: 1px solid #BEBEBE;
             /* This creates the border. Replace black with whatever color you want. */
         }
+
+        .contacts--disclaimer .contacts__infos__line__certificates {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__certificates img {
+            outline: none;
+            text-decoration: none;
+            max-width: 100%;
+            font-size: 16px
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer__law td {
+            border-collapse: collapse;
+            font-size: 15px;
+            color: #23496d;
+            word-break: break-word;
+            padding: 10px 24px
+        }
     </style>
 </head>
 
@@ -395,10 +426,11 @@
                 <tr>
                     <td>
                         <span>
-                            <i class="fa-brands triangle"></i>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
                         </span>
-                        Caso você não reconheça essa solicitação, entre em contato conosco
-                        em um de nossos Canais de Atendimento o quanto antes.
+                        <p> Caso você não reconheça essa solicitação, entre em contato conosco
+                            em um de nossos Canais de Atendimento o quanto antes.
+                        </p>
                     </td>
                 </tr>
             </tbody>
@@ -477,30 +509,21 @@
                 </tr>
             </tbody>
         </table>
-        <table>
+        <table class="contacts__infos__line__certificates">
             <tbody>
                 <tr>
-                    <td style="border-collapse:collapse;color:#23496d;word-break:break-word;text-align:center;padding:10px 20px 20px;font-size:0px"
-                        valign="top" align="center">
-
-                        <img style="outline:none;text-decoration:none;max-width:100%;font-size:16px"
-                            alt="16b73932-7f7a-4e8d-a5cd-9b3674b22b56"
-                            src="https://ci5.googleusercontent.com/proxy/2_Th0pMQt47q_lToa_ke364W36nBYgmkuJTFvYiUBXhBot1gLniPbUzME5xEz9mPu8rQER0QBl65IAjwZGJ23_JDAz3fPRAM-Dz23MstY22h8m2zKTeYpBbpi7KOUunVD4bbe8Zj635cKfd2Oo4AC-P87288qkAgfwPQ8mNXf4ASHAPooHq_LHzIT0VryT-pKEW7k-u-SW1Pm8ZhMb4dIXmwRN1YYBPWbYAov9VXUaecJT8cdRE=s0-d-e1-ft#https://email.terrainvestimentos.com.br/hs-fs/hubfs/16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png?width=1120&amp;upscale=true&amp;name=16b73932-7f7a-4e8d-a5cd-9b3674b22b56.png"
-                            class="CToWUd" width="560" align="middle">
-
+                    <td>
+                        <img alt="Imagem de Certificados" src={{ certificates_url_image }} class="CToWUd">
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table>
+        <table class="contacts__infos__disclaimer__law">
             <tbody>
                 <tr>
-                    <td
-                        style="border-collapse:collapse;font-size:15px;color:#23496d;word-break:break-word;padding:10px 24px">
-                        <div style="color:inherit;font-size:inherit;line-height:inherit"
-                            id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351">
-                            <div style="color:inherit;font-size:inherit;line-height:inherit"
-                                id="m_-9099462870854037562hs_cos_wrapper_module_16294057515351_">
+                    <td>
+                        <div>
+                            <div>
                                 <p
                                     style="font-size:11px;line-height:17px;margin:0;text-align:left;color:#666666;margin-bottom:21px">
                                     <strong>
