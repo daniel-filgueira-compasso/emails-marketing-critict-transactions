@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+            background-color: #d8d8d8;
+        }
+
+        table thead th td {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .header {
+            min-width: 280px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background-color: #27272A;
+            height: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header--partner--logo .header__img {
+            outline: none;
+            text-decoration: none;
+            max-width: 135px;
+            width: 135px;
+            height: 37px;
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px 0px;
+            flex-direction: column;
+            min-width: 280px;
+            max-width: 600px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background-color: #FFFFFF;
+            display: flex;
+        }
+
+        .content--infos .content__infos__table {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .content--infos .content__infos__banking {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 26px;
+        }
+
+        .content--infos .content__infos__banking .content__infos__banking__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            color: #3F3F46;
+            padding-right: 100px;
+        }
+
+        .content--infos .content__infos__banking .content__infos__banking__value {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 22px;
+            color: #71717A;
+        }
+
+        .content--infos .content__infos__alert {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .content--infos .content__infos__alert tbody tr td {
+            display: flex;
+            max-width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+            font-style: normal;
+            color: #3F3F46;
+            background-color: #FAED97;
+            border: transparent;
+            padding: 16px 46px;
+            margin-bottom: 21px;
+            margin-top: 21px;
+        }
+
+        .content--infos .content__infos__alert tbody tr td span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 18px;
+        }
+
+        .content--infos .content__infos__alert tbody tr td span i {
+            font-size: 28px;
+            color: #DBC10B;
+            background-color: #FAED97;
+        }
+
+        .content--infos .content__infos__alert tbody tr td p {
+            text-align: left;
+        }
+
+        .content--infos .content__infos__name {
+            margin: 0px;
+            margin-left: 37px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #666666;
+        }
+
+        .content--infos .content__infos__line__left__wrapper {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .content--infos .content__infos__line__right__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .content--infos .content__infos__line__left {
+            display: inline-block;
+            width: 276px;
+            height: 4px;
+
+            /* Gray Dark/Gray 200 */
+            background-color: #3F3F46;
+            border-radius: 4px;
+            background-size: 0px;
+        }
+
+        .content--infos .content__infos__line__right {
+            display: inline-block;
+            width: 277px;
+            height: 4px;
+
+            /* Gray Dark/Gray 200 */
+            background-color: #3F3F46;
+            border-radius: 4px;
+            background-size: 0px;
+        }
+
+        .content--infos .content__infos_title_description {
+            font-style: normal;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 20px;
+            color: #3F3F46;
+            margin-top: 24px;
+        }
+
+        .content--infos .content__infos__icon__wrapper {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 27px 0px;
+        }
+
+        .content--infos .content__infos__icon {
+            max-width: 112px;
+            max-height: 112px;
+        }
+
+        .contacts {
+            padding-top: 20px;
+            flex-direction: column;
+            min-width: 280px;
+            max-width: 600px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background-color: #EEEEEE;
+            display: flex;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .contacts--disclaimer .contacts__infos__attendance {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            padding: 0px 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__title {
+            text-align: center;
+            line-height: 17px;
+            font-size: 11px;
+            margin: 0;
+            margin-bottom: 25px;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__email {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__phone {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__attendance .contact__info__attendance__phone2 {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__title {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__email {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contacts__infos__wrapper .contacts__infos__ombudsman .contact__info__ombudsman__phone {
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        .contacts--disclaimer .contact__info__attendance__title .contact__info__icon__wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: #2aa81a;
+            color: #FFFFFF;
+            border-radius: 50%;
+        }
+
+        .contacts--disclaimer .contacts__infos__ombudsman {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            padding: 0px 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+            text-align: center
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer .contact__infos__ombudsman__description {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+            color: #666666;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__separator {
+            border-spacing: 0 !important;
+            border-collapse: collapse;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__separator .contact__infos__line__separator__element::after {
+            content: "";
+            /* This is necessary for the pseudo element to work. */
+            display: block;
+            /* This will put the pseudo element on its own line. */
+            margin: 0 auto;
+            /* This will center the border. */
+            width: 90%;
+            /* Change this to whatever width you want. */
+            padding-top: 20px;
+            /* This creates some space between the element and the border. */
+            border-bottom: 1px solid #BEBEBE;
+            /* This creates the border. Replace black with whatever color you want. */
+        }
+
+        .contacts--disclaimer .contacts__infos__line__certificates {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
+
+        .contacts--disclaimer .contacts__infos__line__certificates img {
+            outline: none;
+            text-decoration: none;
+            max-width: 100%;
+            font-size: 16px
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer__law td {
+            border-collapse: collapse;
+            font-size: 15px;
+            color: #23496d;
+            word-break: break-word;
+            padding: 10px 24px
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer__law .contacts__infos__disclaimer__law__title {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+            text-align: left;
+            color: #666666;
+            margin-bottom: 21px;
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer__law .contacts__infos__disclaimer__law__description {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+            text-align: justify;
+            color: #666666;
+        }
+
+        .contacts--disclaimer .contacts__infos__disclaimer__law .contacts__infos__disclaimer__law__address {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0;
+            text-align: justify;
+            color: #666666
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header header--partner--logo">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img class="header__img" src={{ partner_logo_url }} alt="Logo do Parceiro" srcset={{
+                            partner_logo_url }}>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="content content--infos">
+        <table class="content__infos__table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="content__infos__name">
+                            Olá {{ client_name }}!
+                        </p>
+                        <div class="content__infos__line__left__wrapper">
+                            <span class="content__infos__line__left"></span>
+                        </div>
+                        <span>
+                            <p class="content__infos_title_description">{{ info_title_description }}</p>
+                        </span>
+                        <span class="content__infos__icon__wrapper">
+                            <img class="content__infos__icon" src={{ content_icon }} srcset{{ content_icon }}
+                                alt="Icone de transferência" />
+                        </span>
+                        <div class="content__infos__line__right__wrapper">
+                            <span class="content__infos__line__right"></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="content__infos__banking">
+            <tbody>
+                <tr>
+                    <td class="content__infos__banking__title">{{ product_value_title }}</td>
+                    <td class="content__infos__banking__value">{{ product_value }}</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">{{ issuer_title }}</td>
+                    <td class="content__infos__banking__value">{{ issuer_value }}</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">{{ gross_value_title }}</td>
+                    <td class="content__infos__banking__value">{{ gross_value }}</td>
+                </tr>
+                <tr>
+                    <td class="content__infos__banking__title">{{ data_rescue_title }}:</td>
+                    <td class="content__infos__banking__value">{{ data_rescue_value }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="content__infos__alert">
+            <tbody>
+                <tr>
+                    <td>
+                        <span>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </span>
+                        <p> Caso você não reconheça essa solicitação, entre em contato conosco
+                            em um de nossos Canais de Atendimento o quanto antes.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="contacts contacts--disclaimer">
+        <div class="contacts__infos__wrapper">
+            <table class="contacts__infos__attendance">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="contact__info__attendance__title">
+                                <span class="contact__info__icon__wrapper">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </span>
+                                <strong style="color:#666666">
+                                    Atendimento
+                                </strong>
+                            </p>
+                            <p class="contact__info__attendance__email">
+                                <a href="mailto:atendimento@terrainvestimentos.com.br"
+                                    target="_blank">atendimento@<wbr>terrainvestimentos.com.br</a></span>
+                            </p>
+                            <p class="contact__info__attendance__phone">
+                                <span>
+                                    (11) 3165-6065 (São Paulo e região metropolitana)
+                                </span>
+                            </p>
+                            <p class="contact__info__attendance__phone2">
+                                0800 940 0006 (demais localidades)
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="contacts__infos__ombudsman">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="contact__info__ombudsman__title"
+                                style="color:#666666;text-align:left;line-height:150%;font-size:11px;margin:0;margin-bottom:25px;text-align:center;">
+                                <span>
+                                    <strong>
+                                        <span>Ouvidoria</span></strong></span>
+                            </p>
+                            <p class="contact__info__ombudsman__email">
+                                <a href="mailto:ouvidoria@terrainvestimentos.com.br"
+                                    target="_blank">ouvidoria@terrainvestimentos.<wbr>com.br</a>
+                                &nbsp;
+                            </p>
+                            <p class="contact__info__ombudsman__phone">
+                                0800 940 0406
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="contacts__infos__disclaimer">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="contact__infos__ombudsman__description">
+                            As áreas de Atendimento e Ouvidoria funcionam em dias úteis das
+                            9h às
+                            18h.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="contacts__infos__line__separator">
+            <tbody>
+                <tr>
+                    <td class="contact__infos__line__separator__element"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="contacts__infos__line__certificates">
+            <tbody>
+                <tr>
+                    <td>
+                        <img alt="Imagem de Certificados" src={{ certificates_url_image }} class="CToWUd">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="contacts__infos__disclaimer__law">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="contacts__infos__disclaimer__law__title">
+                            <strong>
+                                DISCLAIMER
+                            </strong>
+                        </p>
+                        <p class="contacts__infos__disclaimer__law__description">
+                            Esta
+                            mensagem é exclusivamente para fins informativos e não deve ser
+                            considerada como uma recomendação, sugestão de estratégia ou análise
+                            de valores mobiliários. Esta mensagem também não se enquadra como
+                            uma oferta ou solicitação para a compra ou venda de qualquer
+                            instrumento financeiro ou garantia de confirmação de operação. Além
+                            disso, esta comunicação não leva em consideração os objetivos de
+                            investimento, situação financeira ou necessidades específicas de
+                            qualquer investidor e não deve servir como única fonte de
+                            informações no processo decisório do investidor, que deverá realizar
+                            uma análise da oferta e seus respectivos riscos, diante de seus
+                            objetivos e da sua tolerância a riscos. A Terra Investimentos não se
+                            responsabiliza pelos resultados advindos das decisões de
+                            investimentos tomadas pelos clientes, não podendo ser acionada por
+                            retornos positivos e/ou negativos que impactem o patrimônio do
+                            investidor. Ressaltamos que as informações contidas nesta mensagem
+                            poderão sofrer alterações sem aviso prévio, o que poderá impactar os
+                            preços dos ativos no momento de efetiva contratação. Investimentos
+                            em ações e outros valores mobiliários apresentam riscos elevados e a
+                            rentabilidade obtida no passado não representa garantia de
+                            resultados futuros, e a rentabilidade divulgada não é liquida de
+                            impostos. O investimento em Ações, Fundos Imobiliários e BDRs não
+                            são garantidos pelo Fundo Garantidor de Crédito (FGC).
+
+                        </p>
+                        <p class="contacts__infos__disclaimer__law__address">
+                            <br />
+                            Terra Investimentos, Rua Joaquim Floriano, 100, 5º andar, São Paulo,
+                            SP 04534-000, Brasil
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
